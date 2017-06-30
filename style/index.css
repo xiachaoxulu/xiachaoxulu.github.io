@@ -146,6 +146,10 @@ body {
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 
+body {
+    min-width: 1000px;
+}
+
 a {
     text-decoration: none;
 }
@@ -160,9 +164,8 @@ a {
 
 .header {
     position: fixed;
-    max-width: 100vw;
-    max-width: 100%;
-    min-width: 1200px;
+    width: 100%;
+    min-width: 1000px;
     height: 65px;
     left: 0;
     right: 0;
@@ -174,7 +177,7 @@ a {
 }
 
 .header-section {
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
     height: 65px;
     line-height: 65px;
@@ -199,4 +202,64 @@ a {
     font-size: 16px;
     margin-left: 15px;
     display: inline-block;
+}
+
+.main-container {
+    padding-top: 120px;
+    min-height: 500px;
+    min-height: calc(100vh - 46px);
+}
+
+.main-container .main {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-container .main .nav {
+    position: fixed;
+    top: 120px;
+    left: 0px;
+    width: 60px;
+}
+
+.nav-pills li {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.nav-pills a {
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 3px;
+    color: #9b4dca;
+}
+
+.nav-pills a.active {
+    border-bottom: 1px #9b4dca dashed;
+}
+
+.nav-pills a:hover {
+    color: #606c76;
+}
+
+.main-container .main .list {
+    margin-left: 60px;
+    width: 940px;
+    height: 2000px;
+}
+
+.footer-container {
+    height: 46px;
+    line-height: 46px;
+    overflow: hidden;
+}
+
+.footer-container .footer {
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+    border-top: .1rem solid #d1d1d1;
 }

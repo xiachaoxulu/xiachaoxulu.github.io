@@ -19,9 +19,44 @@
             </a>
         </section>
     </div>
-
-
-    <script type="text/javascript" color="255,0,0" opacity='0.5' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    <div class="main-container">
+        <div class="main">
+            <div class="nav">
+                <ul class="nav-pills">
+                    <li><a class="active" href="javascript:void(0)" data-item="0">交互</a></li>
+                    <li><a href="javascript:void(0)" data-item="1">绘画</a></li>
+                    <li><a href="javascript:void(0)" data-item="2">生活</a></li>
+                    <li><a href="javascript:void(0)" data-item="3">厨房</a></li>
+                </ul>
+            </div>
+            <div class="list"></div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <section class="footer">
+            <p>Copyright © 2014-2020 许木木</p>
+        </section>
+    </div>
+    <script>
+        // 处理导航位置 和 点击事件
+        (function () {
+            var nav = document.querySelector('.main-container .nav');
+            nav.style.left = document.querySelector('.main-container .main').getBoundingClientRect().left + 'px';
+            var pills = document.querySelector('.nav-pills');
+            pills.addEventListener('click', function (event) {
+                if (event.target.matches('.nav-pills a')) {
+                    var item = event.target.dataset.item || event.target.getAttribute('data-item')
+                    if (typeof item !== undefined) {
+                        [].slice.call(pills.querySelectorAll('a')).forEach(function (item) {
+                            item.className = "";
+                        })
+                        event.target.className = "active"
+                    }
+                }
+            })
+        })()
+    </script>
+    <script type="text/javascript" color="255,0,0" opacity='0.5' zIndex="-2" count="99" src="http://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </body>
 
 </html>
