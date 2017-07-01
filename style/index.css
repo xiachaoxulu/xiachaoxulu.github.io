@@ -249,6 +249,7 @@ a {
     margin-left: 60px;
     padding: 10px 10px 10px 50px;
     width: 940px;
+    background-color: rgba(255,255,255,0.8);
 }
 
 .node-list li {
