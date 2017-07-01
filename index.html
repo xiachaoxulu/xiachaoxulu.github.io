@@ -99,6 +99,10 @@
         (function () {
             var nav = document.querySelector('.main-container .nav');
             nav.style.left = document.querySelector('.main-container .main').getBoundingClientRect().left + 'px';
+            
+            window.onresize=function(){
+              nav.style.left = document.querySelector('.main-container .main').getBoundingClientRect().left + 'px';
+            }
             var pills = document.querySelector('.nav-pills');
             pills.addEventListener('click', function (event) {
                 if (event.target.matches('.nav-pills a')) {
