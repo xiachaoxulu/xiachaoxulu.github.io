@@ -100,11 +100,9 @@
             var nav = document.querySelector('.main-container .nav');
             var mian=document.querySelector('.main-container .main');
             nav.style.left =mian.getBoundingClientRect().left + 'px';
-            
-            window.onresize=function(){
-              nav.style.left =mian.getBoundingClientRect().left + 'px';
-                console.log(mian.getBoundingClientRect().left)
-            }
+          window.addEventListener("resize", function () {
+                    nav.style.left =mian.getBoundingClientRect().left + 'px';
+          })
             var pills = document.querySelector('.nav-pills');
             pills.addEventListener('click', function (event) {
                 if (event.target.matches('.nav-pills a')) {
