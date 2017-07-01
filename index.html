@@ -98,10 +98,12 @@
         // 处理导航位置 和 点击事件
         (function () {
             var nav = document.querySelector('.main-container .nav');
-            nav.style.left = document.querySelector('.main-container .main').getBoundingClientRect().left + 'px';
+            var mian=document.querySelector('.main-container .main');
+            nav.style.left =mian.getBoundingClientRect().left + 'px';
             
             window.onresize=function(){
-              nav.style.left = document.querySelector('.main-container .main').getBoundingClientRect().left + 'px';
+              nav.style.left =mian.getBoundingClientRect().left + 'px';
+                console.log(mian.getBoundingClientRect().left)
             }
             var pills = document.querySelector('.nav-pills');
             pills.addEventListener('click', function (event) {
