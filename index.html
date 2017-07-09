@@ -100,6 +100,7 @@
         var mian = document.querySelector('.main-container .main');
         var download=document.querySelector('#resume_preview_bar');
         var pills = document.querySelector('.nav-pills');
+        var iframe = document.querySelector("#iframe");
         pills.addEventListener('click', function(event) {
             if (event.target.matches('.nav-pills a')) {
                 var item = event.target.dataset.item || event.target.getAttribute('data-item')
