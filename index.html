@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <div class="header">
         <section class="header-section">
             <a href="/" class="logo">
@@ -27,10 +26,11 @@
                     <li>
                         <span class="title">作品集</span>
                         <ul class="subnav">
-                            <li><a href="javascript:void(0)" data-item="1">云账户管家</a></li>
-                            <li><a href="javascript:void(0)" data-item="2">IDaaS平台</a></li>
-                            <li><a href="javascript:void(0)" data-item="3">影集</a></li>
-                            <li><a href="javascript:void(0)" data-item="4">小康生活</a></li>
+                            <li><a href="javascript:void(0)" data-item="1">云账户前端</a></li>
+                            <li><a href="javascript:void(0)" data-item="2">云账户后端</a></li>
+                            <li><a href="javascript:void(0)" data-item="3">IDaaS平台</a></li>
+                            <li><a href="javascript:void(0)" data-item="4">影集</a></li>
+                            <li><a href="javascript:void(0)" data-item="5">小康生活</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -38,9 +38,19 @@
             <div class="iframe-content">
                 <!-- <img src="./images/clound.png" width="100%" alt=""> -->
                 <!-- <img src="./images/clound1.png" width="100%" alt=""> -->
-                <iframe width="100%"  height="10969px" scrolling="no" style="border:0px;" src="./articles/clound.html" frameborder="0"></iframe>
+                <iframe id="iframe" width="100%" height="2130px" scrolling="no" style="border:0px;" src="./articles/preview.html" frameborder="0"></iframe>
+                <div id="resume_preview_bar">
+                    <div class="mr_down">
+                        <i></i><a href="/profile.doc" download="许璐的简历">下载简历</a>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="backtop">
+            <a href="javascript:void(0)">
+            </a>
+        </div>
+    </div>
     </div>
     <div class="footer-container">
         <section class="footer">
@@ -48,27 +58,72 @@
         </section>
     </div>
     <script>
-        // 处理导航位置 和 点击事件
-        (function () {
-            var nav = document.querySelector('.main-container .nav');
-            var mian=document.querySelector('.main-container .main');
-            nav.style.left =mian.getBoundingClientRect().left + 'px';
-          window.addEventListener("resize", function () {
-                    nav.style.left =mian.getBoundingClientRect().left + 'px';
-          })
-            var pills = document.querySelector('.nav-pills');
-            pills.addEventListener('click', function (event) {
-                if (event.target.matches('.nav-pills a')) {
-                    var item = event.target.dataset.item || event.target.getAttribute('data-item')
-                    if (typeof item !== undefined) {
-                        [].slice.call(pills.querySelectorAll('a')).forEach(function (item) {
-                            item.className = "";
-                        })
-                        event.target.className = "active"
+    // 处理导航位置 和 点击事件
+    (function() {
+        var map = {
+            0: {
+                src: "./articles/preview.html",
+                height: "2130px"
+            },
+            1: {
+                src: './articles/clound.html',
+                height: '10969px'
+            },
+            2: {
+                src: './articles/webclound.html',
+                height: '3965px'
+            },
+            3: {
+                src: './articles/isass.html',
+                height: '23189px'
+            }
+        }
+        var backtop = document.querySelector('.backtop');
+        backtop.addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        })
+        var scrollTop, clientHeight;
+
+        function displayBackTop() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var clientHeight = window.innerHeight || document.documentElement.clientHeight;
+            if (scrollTop >= clientHeight) {
+                backtop.style.display = 'block'
+            } else {
+                backtop.style.display = 'none'
+            }
+        }
+        window.onscroll = function() {
+            displayBackTop();
+        }
+        displayBackTop();
+        var mian = document.querySelector('.main-container .main');
+        var download=document.querySelector('#resume_preview_bar');
+        var pills = document.querySelector('.nav-pills');
+        var iframe = document.querySelector('#iframe');
+        pills.addEventListener('click', function(event) {
+            if (event.target.matches('.nav-pills a')) {
+                var item = event.target.dataset.item || event.target.getAttribute('data-item')
+                if (typeof item !== undefined) {
+                    [].slice.call(pills.querySelectorAll('a')).forEach(function(item) {
+                        item.className = "";
+                    })
+                    if(item!=0){
+                        download.style.display="none"
                     }
+                    else{
+                        download.style.display="block"
+                    }
+                    event.target.className = "active"
+                    iframe.src = map[item].src
+                    iframe.height = map[item].height
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
                 }
-            })
-        })()
+            }
+        })
+    })()
     </script>
     <script type="text/javascript" color="255,0,0" opacity='0.5' zIndex="-2" count="99" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </body>
