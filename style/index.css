@@ -236,16 +236,19 @@ a {
     letter-spacing: 3px;
     color: #9b4dca;
 }
-.nav-pills span.title{
-      font-size: 15px;
-     display: inline-block;
-     padding: 10px 5px;
-     color: #606c76;
+
+.nav-pills span.title {
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px 5px;
+    color: #606c76;
 }
-.nav-pills .subnav{
+
+.nav-pills .subnav {
     font-size: 14px;
     padding-left: 10px;
 }
+
 .nav-pills a.active {
     border-bottom: 1px #9b4dca dashed;
 }
@@ -254,34 +257,33 @@ a {
     color: #606c76;
 }
 
-
-.backtop{
+.backtop {
     display: none;
     position: fixed;
     left: 50%;
     margin-left: 610px;
     bottom: 45px;
 }
-.backtop a{
+
+.backtop a {
     display: inline-block;
-    background:url('../images/up_arrow.png') no-repeat;
+    background: url('../images/up_arrow.png') no-repeat;
     width: 48px;
     height: 48px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     transition: all .2s;
 }
-.backtop a:hover{
 
-    transform:rotate(360deg);
+.backtop a:hover {
+    transform: rotate(360deg);
 }
+
 .main-container .main .iframe-content {
     margin-left: 120px;
     padding: 10px 10px 10px 50px;
     width: 1080px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
-
-
 
 .footer-container {
     height: 46px;
@@ -295,52 +297,34 @@ a {
     margin: 0 auto;
     border-top: .1rem solid #d1d1d1;
 }
-#resume_preview_bar {
-   width: 1020px;
-    height: 54px;
-    position: fixed;
-    bottom: 0px;
-    z-index: 1000;
-    background:url(../images/overlay_7e91d1e.png) repeat;
+
+.profile {
+    float: right;
 }
 
-#resume_preview_bar  .mr_down {
-    width: 116px;
-    height: 33px;
-    text-align: center;
-    line-height: 33px;
-    background: #fff;
-    margin: 12px auto;
-    border-radius: 3px
+.profile a {
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #606c76;
+    display: inline-block;
+    background-repeat: repeat-x;
+    background-position: -1px -1px;
+    background-size: 110% 110%;
+    border: 1px solid rgba(27, 31, 35, 0.2);
+    border-radius: 0.25em;
+    -webkit-appearance: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
 }
 
-#resume_preview_bar  .mr_down i {
-    float: left;
-    margin: 7px 7px 7px 12px;
-    width: 21px;
-    height: 19px;
-    background: url(../images/mr_down_cbe28f6.png) -21px no-repeat
-}
-
-#resume_preview_bar  .mr_down a {
-    color: #08aa84;
-    float: left
-}
-
-#resume_preview_bar  .mr_down:hover {
-    background: #03a47f;
-    cursor: pointer
-}
-
-#resume_preview_bar  .mr_down:hover i {
-    background-position: 0 0
-}
-
-#resume_preview_bar  .mr_down:hover a {
-    color: #fff
-}
-
-#resume_preview_bar  .mr_down_tip {
-    margin-left: -48px;
-    left: 50%
+.profile a:hover {
+    background-color: #e6ebf1;
+    background-image: -webkit-linear-gradient(270deg, #f0f3f6 0%, #e6ebf1 90%);
+    background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
+    background-position: 0 -0.5em;
+    border-color: rgba(27, 31, 35, 0.35);
 }
