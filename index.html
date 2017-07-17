@@ -17,7 +17,7 @@
                 <h1 class="title">许璐的简历</h1>
             </a>
             <div class="profile">
-                  <i></i><a href="/许璐的简历.doc" download="许璐的简历">下载简历</a>
+                <i></i><a href="/许璐的简历.doc" download="许璐的简历">下载简历</a>
             </div>
         </section>
     </div>
@@ -42,7 +42,7 @@
                 <!-- <img src="./images/clound.png" width="100%" alt=""> -->
                 <!-- <img src="./images/clound1.png" width="100%" alt=""> -->
                 <iframe id="iframe" width="100%" height="2130px" scrolling="no" style="border:0px;" src="./articles/preview.html" frameborder="0"></iframe>
-                 
+
             </div>
         </div>
         <div class="backtop">
@@ -57,71 +57,71 @@
         </section>
     </div>
     <script>
-    // 处理导航位置 和 点击事件
-    (function() {
-        var map = {
-            0: {
-                src: "./articles/preview.html",
-                height: "2130px"
-            },
-            1: {
-                src: './articles/clound.html',
-                height: '10969px'
-            },
-            2: {
-                src: './articles/webclound.html',
-                height: '3965px'
-            },
-            3: {
-                src: './articles/isass.html',
-                height: '23189px'
-            },
-            5:{
-                 src: './articles/xiaokang.html',
-                height: '5684px'
-            }
-        }
-        var backtop = document.querySelector('.backtop');
-        backtop.addEventListener('click', function() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        })
-        var scrollTop, clientHeight;
-
-        function displayBackTop() {
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            var clientHeight = window.innerHeight || document.documentElement.clientHeight;
-            if (scrollTop >= clientHeight) {
-                backtop.style.display = 'block'
-            } else {
-                backtop.style.display = 'none'
-            }
-        }
-        window.onscroll = function() {
-            displayBackTop();
-        }
-        displayBackTop();
-        var mian = document.querySelector('.main-container .main');
-        var download=document.querySelector('#resume_preview_bar');
-        var pills = document.querySelector('.nav-pills');
-        var iframe = document.querySelector("#iframe");
-        pills.addEventListener('click', function(event) {
-            if (event.target.matches('.nav-pills a')) {
-                var item = event.target.dataset.item || event.target.getAttribute('data-item')
-                if (typeof item !== undefined) {
-                    [].slice.call(pills.querySelectorAll('a')).forEach(function(item) {
-                        item.className = "";
-                    })
-                     
-                    event.target.className = "active"
-                    iframe.src = map[item].src
-                    iframe.height = map[item].height
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
+        // 处理导航位置 和 点击事件
+        (function () {
+            var map = {
+                0: {
+                    src: "./articles/preview.html",
+                    height: "2130px"
+                },
+                1: {
+                    src: './articles/clound.html',
+                    height: '9987px'
+                },
+                2: {
+                    src: './articles/webclound.html',
+                    height: '3965px'
+                },
+                3: {
+                    src: './articles/isass.html',
+                    height: '23189px'
+                },
+                5: {
+                    src: './articles/xiaokang.html',
+                    height: '5684px'
                 }
             }
-        })
-    })()
+            var backtop = document.querySelector('.backtop');
+            backtop.addEventListener('click', function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            })
+            var scrollTop, clientHeight;
+
+            function displayBackTop() {
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var clientHeight = window.innerHeight || document.documentElement.clientHeight;
+                if (scrollTop >= clientHeight) {
+                    backtop.style.display = 'block'
+                } else {
+                    backtop.style.display = 'none'
+                }
+            }
+            window.onscroll = function () {
+                displayBackTop();
+            }
+            displayBackTop();
+            var mian = document.querySelector('.main-container .main');
+            var download = document.querySelector('#resume_preview_bar');
+            var pills = document.querySelector('.nav-pills');
+            var iframe = document.querySelector("#iframe");
+            pills.addEventListener('click', function (event) {
+                if (event.target.matches('.nav-pills a')) {
+                    var item = event.target.dataset.item || event.target.getAttribute('data-item')
+                    if (typeof item !== undefined) {
+                        [].slice.call(pills.querySelectorAll('a')).forEach(function (item) {
+                            item.className = "";
+                        })
+
+                        event.target.className = "active"
+                        iframe.src = map[item].src
+                        iframe.height = map[item].height
+                        document.body.scrollTop = 0;
+                        document.documentElement.scrollTop = 0;
+                    }
+                }
+            })
+        })()
     </script>
     <script type="text/javascript" color="255,0,0" opacity='0.5' zIndex="-2" count="99" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
 </body>
