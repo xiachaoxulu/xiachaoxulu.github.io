@@ -147,7 +147,7 @@ body {
 }
 
 body {
-    min-width: 1200px;
+    min-width: 1000px;
     background-color: #f7f7f7;
 }
 
@@ -166,7 +166,7 @@ a {
 .header {
     position: fixed;
     width: 100%;
-    min-width: 1200px;
+    min-width: 1000px;
     height: 65px;
     left: 0;
     right: 0;
@@ -178,7 +178,7 @@ a {
 }
 
 .header-section {
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
     height: 65px;
     line-height: 65px;
@@ -213,7 +213,7 @@ a {
 
 .main-container .main {
     
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
     position: relative;
     
@@ -283,7 +283,7 @@ a {
 .main-container .main .iframe-content {
     margin-left: 120px;
     padding: 120px 30px 10px 30px;
-    width: 1080px;
+    width: 880px;
     background: white;
 }
 
@@ -295,7 +295,7 @@ a {
 
 .footer-container .footer {
     display: block;
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
     border-top: .1rem solid #d1d1d1;
 }
