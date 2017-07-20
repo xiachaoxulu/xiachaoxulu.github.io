@@ -276,8 +276,6 @@ p {
     margin: 0
 }
 
- 
-
 
 /*!mycenter/modules/preview/preview/main.less*/
 
@@ -957,7 +955,7 @@ em.a {
 
 .mr_title .mr_title_c {
     font-size: 18px;
-    padding: 6px 24px;
+    padding: 6px 21px;
     text-align: center;
     background-color: #eee;
     -moz-border-radius: 26px;
@@ -1497,7 +1495,7 @@ em.a {
     position: fixed;
     bottom: 45px;
     z-index: 1000;
-    background:url(../images/overlay_7e91d1e.png) repeat;
+    background: url(../images/overlay_7e91d1e.png) repeat;
 }
 
 #resume_preview_bar .mr_bottom_l .mr_down {
