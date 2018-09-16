@@ -188,6 +188,7 @@ a {
     display: inline-block;
     height: 48px;
     line-height: 48px;
+    font-size: 24px;
     vertical-align: middle;
 }
 
@@ -200,8 +201,7 @@ a {
 
 .header-section .title {
     color: #606c76;
-    font-size: 16px;
-    margin-left: 15px;
+    font-size: 24px;
     display: inline-block;
 }
 
@@ -223,7 +223,7 @@ a {
     position: fixed;
     top: 120px;
     width: 120px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .nav-pills li {
@@ -236,7 +236,7 @@ a {
     display: inline-block;
     vertical-align: middle;
     letter-spacing: 3px;
-    color: #9b4dca;
+    color: #666;
 }
 
 .nav-pills span.title {
@@ -248,11 +248,11 @@ a {
 
 .nav-pills .subnav {
     font-size: 14px;
-    padding-left: 10px;
 }
 
 .nav-pills a.active {
-    border-bottom: 1px #9b4dca dashed;
+    color:#24B4ED;
+    border-bottom: 1px #24B4ED dashed;
 }
 
 .nav-pills a:hover {
