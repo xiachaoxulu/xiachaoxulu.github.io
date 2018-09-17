@@ -178,7 +178,7 @@ a {
 }
 
 .header-section {
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
     height: 65px;
     line-height: 65px;
@@ -212,17 +212,17 @@ a {
 }
 
 .main-container .main {
-    
-    width: 1000px;
+
+    width: 1200px;
     margin: 0 auto;
     position: relative;
-    
+
 }
 
 .main-container .main .nav {
     position: fixed;
     top: 120px;
-    width: 120px;
+    width: 150px;
     font-size: 16px;
 }
 
@@ -263,7 +263,7 @@ a {
     display: none;
     position: fixed;
     left: 50%;
-    margin-left: 610px;
+    margin-left: 650px;
     bottom: 45px;
 }
 
@@ -274,6 +274,7 @@ a {
     height: 48px;
     box-sizing: border-box;
     transition: all .2s;
+    opacity: .5;
 }
 
 .backtop a:hover {
@@ -281,9 +282,9 @@ a {
 }
 
 .main-container .main .iframe-content {
-    margin-left: 120px;
+    margin-left: 150px;
     padding: 120px 30px 10px 30px;
-    width: 880px;
+    width: 1080px;
     background: white;
 }
 
