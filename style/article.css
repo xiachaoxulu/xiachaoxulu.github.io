@@ -159,6 +159,9 @@ a {
 }
 
 
-.iframe-container{
-    
+.iframe-container img{
+    margin-bottom: 10px;
+}
+.iframe-container img:last-child{
+    margin-bottom: 0px;
 }
